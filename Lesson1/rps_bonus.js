@@ -155,7 +155,7 @@ const RPSGame = {
   askHistory() {
     let answers = ['y', 'yes', 'n', 'no'];
     let answer;
-    while(true) {
+    while (true) {
       console.log('Would you like to see the move history? (y/n)');
       answer = readline.question();
       if (answers.includes(answer)) break;
@@ -186,11 +186,11 @@ const RPSGame = {
   playAgain() {
     let answers = ['y', 'yes', 'n', 'no'];
     let answer;
-    while(true) {
+    while (true) {
       console.log('Would you like to play again? (y/n)');
       answer = readline.question();
       if (answers.includes(answer)) break;
-      console.clear();en
+      console.clear();
       console.log('Invalid input. Type y/yes or n/no');
     }
     return answers.slice(0, 2).includes(answer);
