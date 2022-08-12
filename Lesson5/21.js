@@ -7,20 +7,14 @@ class Deck {
 
   constructor() {
     this.cards = {
-      2: Deck.NUMBER_OF_SUITS,
-      3: Deck.NUMBER_OF_SUITS,
-      4: Deck.NUMBER_OF_SUITS,
-      5: Deck.NUMBER_OF_SUITS,
-      6: Deck.NUMBER_OF_SUITS,
-      7: Deck.NUMBER_OF_SUITS,
-      8: Deck.NUMBER_OF_SUITS,
-      9: Deck.NUMBER_OF_SUITS,
-      10: Deck.NUMBER_OF_SUITS,
       Jack: Deck.NUMBER_OF_SUITS,
       Queen: Deck.NUMBER_OF_SUITS,
       King: Deck.NUMBER_OF_SUITS,
       Ace: Deck.NUMBER_OF_SUITS
     };
+    for (let num = 2; num <= 10; num += 1) {
+      this.cards[num] = Deck.NUMBER_OF_SUITS;
+    }
   }
 
   dealCard() {
@@ -38,20 +32,14 @@ class Deck {
 
   resetDeck() {
     this.cards = {
-      2: Deck.NUMBER_OF_SUITS,
-      3: Deck.NUMBER_OF_SUITS,
-      4: Deck.NUMBER_OF_SUITS,
-      5: Deck.NUMBER_OF_SUITS,
-      6: Deck.NUMBER_OF_SUITS,
-      7: Deck.NUMBER_OF_SUITS,
-      8: Deck.NUMBER_OF_SUITS,
-      9: Deck.NUMBER_OF_SUITS,
-      10: Deck.NUMBER_OF_SUITS,
       Jack: Deck.NUMBER_OF_SUITS,
       Queen: Deck.NUMBER_OF_SUITS,
       King: Deck.NUMBER_OF_SUITS,
       Ace: Deck.NUMBER_OF_SUITS
     };
+    for (let num = 2; num <= 10; num += 1) {
+      this.cards[num] = Deck.NUMBER_OF_SUITS;
+    }
   }
 }
 
