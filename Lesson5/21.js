@@ -6,15 +6,7 @@ class Deck {
   static NUMBER_OF_SUITS = 4;
 
   constructor() {
-    this.cards = {
-      Jack: Deck.NUMBER_OF_SUITS,
-      Queen: Deck.NUMBER_OF_SUITS,
-      King: Deck.NUMBER_OF_SUITS,
-      Ace: Deck.NUMBER_OF_SUITS
-    };
-    for (let num = 2; num <= 10; num += 1) {
-      this.cards[num] = Deck.NUMBER_OF_SUITS;
-    }
+    this.resetDeck();
   }
 
   dealCard() {
