@@ -11,7 +11,7 @@ class Deck {
 
   dealCard() {
     let cardKeys = Object.keys(this.cards).filter(crd => this.cards[crd] > 0);
-    let randomIdx = Math.ceil(Math.random() * (cardKeys.length - 1));
+    let randomIdx = Math.floor(Math.random() * (cardKeys.length));
 
     let card = cardKeys[randomIdx];
     this.removeCardFromDeck(card);
@@ -362,10 +362,10 @@ class TwentyOneGame {
   }
 
   richOrBroke() {
-    if (this.player.getMoney() === 0) {
+    if (this.player.getMoney() === Player.IS_BROKE_AT) {
       console.log("You're broke. Maybe find a new hobby...");
       return true;
-    } else if (this.player.getMoney() === 10) {
+    } else if (this.player.getMoney() === Player.IS_RICH_AT) {
       console.log("You're rich! Gambling works after all!");
       return true;
     }
